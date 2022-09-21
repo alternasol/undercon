@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterna Sol | Clean Energy</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #d0c9b4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      min-height: 100vh;
+      min-width: 599px;
+      background: transparent url(./services2.jpg) 0 0 no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(4px) brightness(60%);
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    a.aLink:hover {
+      text-decoration: underline;
+    }
+
+    #main {
+      width: 100%;
+      position: relative;
+      z-index: 100;
+    }
+
+    .wrap {
+      width: 599px;
+      margin: auto;
+    }
+
+    #header {
+      padding: 70px 0;
+    }
+
+    #header h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      width: 280px;
+      margin: auto;
+    }
+
+    #header h1::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    #header h1::after {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+
+    #contents {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: white;
+      padding-bottom: 35px;
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: normal;
+      margin-top: -50px;
+    }
+
+    #contents h2 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 80px;
+      line-height: 80px;
+      font-weight: 700;
+    }
+
+    #contents .loader {
+      padding: 20px 0;
+    }
+
+    #contents .loader .load {
+      background-color: #313031;
+    }
+
+    #contents .loader .load .percentage {
+      background-color: white;
+      height: 10px;
+    }
+
+    #contents .loader .info {
+      display: flex;
+      font-size: 18px;
+    }
+
+    #contents .loader .info span {
+      flex: 1;
+    }
+
+    #contents .loader .info span:first-child {
+      text-align: left;
+    }
+
+    #contents .loader .info span:last-child {
+      text-align: right;
+    }
+
+    #footer {
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    #footer .links {
+      display: flex;
+      justify-content: center;
+    }
+
+    #footer .links a {
+      display: block;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="main">
+    <header id="header">
+      <div class="wrap">
+        <h1>ALTERNA SOLUTIONS</h1>
+      </div>
+    </header>
+    <section id="contents">
+      <div class="wrap">
+        <h2>UNDER <br> CONSTRUCTION</h2>
+        <div class="loader">
+          <div class="load">
+            <div id="count" class="percentage" style="width: 0%">
+            </div>
+          </div>
+          <div class="info">
+            <span>0%</span>
+            <span id="progress">0%</span>
+            <span>100%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="links">
+        <a href="mailto:info@alterna-sol.com">click here for more info</a>
+      </div>
+    </footer>
+  </div>
+
+
+  <script>
+    var elem = document.getElementById("count");
+    let width = 30;
+    let id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        window.open('thanks.html', '_self')
+      } else {
+        elem.style.width = width + '%';
+        document.getElementById("progress").innerHTML = 50 * 1 + '%';
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
